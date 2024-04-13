@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../services/api-client";
-import { FetchResponse } from "./useData";
+import apiClient, { FetchResponse } from "../services/api-client";
 import platforms from "../data/platforms";
 
 interface Platform {
@@ -10,7 +9,6 @@ interface Platform {
 }
 
 const usePlatforms = () => {
-  // @ts-expect-error random ahh bug
   return useQuery({
     queryKey: ["parent_platforms"],
     queryFn: () => {
