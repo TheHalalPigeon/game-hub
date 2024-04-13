@@ -11,8 +11,7 @@ export interface Genre {
 }
 
 const useGenres = () => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
+  // @ts-expect-error random ahh bug
   return useQuery({
     queryKey: ["genres"],
     queryFn: () => {
